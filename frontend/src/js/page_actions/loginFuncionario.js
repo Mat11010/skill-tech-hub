@@ -5,6 +5,7 @@ const button = document.getElementById('loginButton');
 button.addEventListener('click', async () => {
   const emailText = email.value;
   const passwordText = password.value;
+  console.log(emailText, passwordText)
 
   try {
     const response = await fetch('http://localhost:3001/login', {

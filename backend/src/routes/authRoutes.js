@@ -50,8 +50,7 @@ router.post('/reset-password', async (req, res) => {
     }
 
     const hashedPassword = await bcrypt.hash(newPassword, 10);
-    user.password = hashedPassword;
-    await user.save();
+    await User.updateOne({email}, {$set: {password: hashedPassword}})
 
     res.json({ message: 'Senha atualizada com sucesso.' });
   } catch (error) {

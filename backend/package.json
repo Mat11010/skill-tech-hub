@@ -5,7 +5,9 @@
   "main": "index.js",
   "type": "commonjs",
   "scripts": {
-    "build": "webpack --mode development"
+    "build": "webpack --mode development",
+    "start": "node server.js",
+    "dev": "nodemon src/app.js"
   },
   "repository": {
     "type": "git",
@@ -23,6 +25,7 @@
   },
   "homepage": "https://github.com/Richke2005/skill-tech-hub#readme",
   "devDependencies": {
+    "nodemon": "^3.1.10",
     "webpack": "^5.95.0",
     "webpack-cli": "^5.1.4"
   },
@@ -33,6 +36,7 @@
     "cors": "^2.8.5",
     "dotenv": "^16.4.7",
     "express": "^4.21.2",
+    "mongodb": "^6.16.0",
     "mongoose": "^8.13.0",
     "thunder": "^0.2.0"
   }
